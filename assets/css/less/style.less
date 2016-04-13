@@ -1,0 +1,287 @@
+@import (less) "../../bower/normalize-css/normalize.css";
+
+@brand: #d54e21;
+@primary: #4ab866;
+
+@link: #00aadc;
+
+@gray-dark: #2e4453;
+@gray: #a8bece;
+@gray-light: #e9eff3;
+@gray-lighter: #f3f6f8;
+
+@font-face {
+    font-family: 'redactedregular';
+    src: url('fonts/redacted-regular.eot');
+    src: url('fonts/redacted-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/redacted-regular.woff2') format('woff2'),
+         url('fonts/redacted-regular.woff') format('woff'),
+         url('fonts/redacted-regular.ttf') format('truetype'),
+         url('fonts/redacted-regular.svg#redactedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'redacted_scriptbold';
+    src: url('fonts/redacted-script-bold.eot');
+    src: url('fonts/redacted-script-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/redacted-script-bold.woff2') format('woff2'),
+         url('fonts/redacted-script-bold.woff') format('woff'),
+         url('fonts/redacted-script-bold.ttf') format('truetype'),
+         url('fonts/redacted-script-bold.svg#redacted_scriptbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'redacted_scriptlight';
+    src: url('fonts/redacted-script-light.eot');
+    src: url('fonts/redacted-script-light.eot?#iefix') format('embedded-opentype'),
+         url('fonts/redacted-script-light.woff2') format('woff2'),
+         url('fonts/redacted-script-light.woff') format('woff'),
+         url('fonts/redacted-script-light.ttf') format('truetype'),
+         url('fonts/redacted-script-light.svg#redacted_scriptlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'redacted_scriptregular';
+    src: url('fonts/redacted-script-regular.eot');
+    src: url('fonts/redacted-script-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/redacted-script-regular.woff2') format('woff2'),
+         url('fonts/redacted-script-regular.woff') format('woff'),
+         url('fonts/redacted-script-regular.ttf') format('truetype'),
+         url('fonts/redacted-script-regular.svg#redacted_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	color: @gray-dark;
+}
+h1, 
+h2,
+h3,
+h4, 
+h5, 
+h6 {
+	font-family: 'redacted_scriptbold';
+}
+p {
+	font-family: 'redacted_scriptregular';
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+.container {
+	max-width: 980px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.nav {
+	display: flex;
+	height: 60px;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	&__menu {
+		display: flex;
+		position: relative;
+		align-items: center;
+		 align-content: stretch;
+		margin: 0;
+		padding: 0;
+		&:first-child {
+			flex: 1 1 70%;
+		}
+		&:last-child {
+			flex: 1 1 30%;
+			justify-content: flex-end;
+		}
+		a {
+			text-decoration: none;
+			color: @gray-dark;
+			padding: 0 10px;
+			font-weight: 600;
+			&:hover {
+				color: @link;
+			}
+		}
+	}
+	&__menu-item {
+		list-style-type: none;
+		display: inline-block;
+	}
+	.home {
+		margin-right: 10px;
+		display: block;
+		height: 100%;
+	}
+	.home a {
+		font-size: 2.6em;
+		font-weight: 600;
+		font-family: 'redacted_scriptbold';
+		width: 100%;
+	}
+	.sign-up {
+		margin-left: 10px;
+	}
+	.sign-up a {
+		padding: 8px 20px;
+		color: #fff;
+		font-weight: 600;
+		background-color: @primary;
+		border-radius: 50px;
+		&:hover {
+			background-color: darken(@primary, 5%);
+		}
+	}
+}
+.site-content {
+	padding: 60px 0 90px;
+}
+
+// Hero Section.
+.hero {
+	.section__heading {
+		font-size: 3.36em;
+		line-height: 1.18;
+	}
+	.hero__button {
+		padding: 12px 38px;
+		color: #fff;
+		display: inline-block;
+		font-weight: 600;
+		background-color: transparent;
+		border-radius: 50px;
+		background-color: @primary;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 14px;
+		&:hover {
+			background-color: darken(@primary, 5%);
+		}
+	}
+}
+
+// Customers Section
+.featured {
+	padding: 30px 0;
+	margin: 150px 0 150px;
+	background-color: @gray-light;
+	text-align: center;
+	figure {
+		margin: 0;
+	}
+	.section__heading {
+		color: @gray;
+		margin-bottom: 30px;
+	}
+}
+
+// Customers Section
+.customers {
+	text-align: center;
+}
+.customers-list {
+	display: flex;
+	position: relative;
+	align-items: flex-start;
+	align-content: stretch;
+	margin: 50px 0 0 0;
+	padding: 0;
+	&__item {
+		list-style-type: none;
+		flex: 1 1 calc( 100% / 3 );
+		margin: 0;
+		padding: 20px;
+		p {
+			font-size: 1.2em;
+			line-height: 1.18;
+		}
+	}
+}
+.person {
+	&__figure {
+		margin: 0 0 25px 0;
+		img {
+			border-radius: 50%;
+		}
+	}
+}
+
+// Subscribe.
+.subscribe {
+	padding: 80px 0 100px;
+	border-top: 1px solid @gray-light;
+	background-color: @gray-lighter;
+	text-align: center;
+}
+.subscribe-form {
+	display: flex;
+	justify-content: center;
+	max-width: 600px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	&__field,
+	&__button {
+		width: 100%;
+	}
+	&__field {
+		padding: 15px 30px;
+		flex: 1 1 70%;
+		border: 1px solid @gray-light;
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+		border-right: 0;
+		&:focus {
+			outline: 0;
+			border-color: darken(@gray-light, 6%);
+		}	
+	}
+	&__button {
+		flex: 1 1 30%;
+		border: 0;
+		background-color: @primary;
+		color: #fff;
+		border-top-right-radius: 30px;
+		border-bottom-right-radius: 30px;
+		&:hover {
+			background-color: darken(@primary, 5%);
+		}
+	}
+}
+
+.site-footer {
+	background-color: @gray-dark;
+	padding: 30px 0 60px;
+	color: @gray;
+	.footnote {
+		margin: 30px 0 0 0;
+		font-family: 'redacted_scriptregular';
+		line-height: 1.2;
+		text-align: center;
+		max-width: 720px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.nav__menu {
+		justify-content: center;
+		a {
+			color: @gray;
+		}
+		a:hover {
+			color: @gray-light;	
+		}
+	}
+}
