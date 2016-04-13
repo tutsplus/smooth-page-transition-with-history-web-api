@@ -474,9 +474,7 @@ p {
   display: inline-block;
 }
 .nav .home {
-  margin-right: 10px;
-  display: block;
-  height: 100%;
+  margin-right: 20px;
 }
 .nav .home a {
   font-size: 2.6em;
