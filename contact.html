@@ -33,52 +33,35 @@
 	</nav>
 </header>			
 			<div class="site-content" id="content">	
-	<section class="section hero">
+<section class="section contact">
+
+	<header class="section__header">
 		<div class="container">
-			<h1 class="section__heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, error.</h1>
-			<div class="sign-up">
-				<a href="sign-up.html" class="hero__button">Sign-up</a>
+			<h1 class="section__heading">Contact Us</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, asperiores nisi.</p>
+		</div>
+	</header>
+
+	<div class="container section__col">
+		<form class="contact-form" action="" method="post">
+			<div>
+				<label class="contact-form__label" for="full-name">Name</label>
+				<input class="contact-form__field" type="text" id="full-name" placeholder="e.g. John Doe">
 			</div>
-		</div>
-	</section>
-
-	<section class="section featured">
-		<div class="container">
-			<h1 class="section__heading">Featured in none of these websites</h1>
-			<figure>
-				<img src="assets/img/featured.png" height="179" width="800" alt="">
-			</figure>
-		</div>
-	</section>
-
-	<section class="section customers">
-		<div class="container">
-			<h1 class="section__heading">Lorem ipsum dolor.</h1>
-			<ul class="customers-list">
-				<li class="customers-list__item person">
-					<figure class="person__figure">
-						<img src="assets/img/avatar.png" height="120" width="120" alt="">
-					</figure>
-					<h2 class="person__name">John Doe</h2>
-					<p class="person__say">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, rerum!</p>
-				</li>
-				<li class="customers-list__item person">
-					<figure class="person__figure">
-						<img src="assets/img/avatar.png" height="120" width="120" alt="">
-					<h2 class="person__name">Jane Doe</h2>
-					<p class="person__say">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, rerum!</p>
-				</li>
-				<li class="customers-list__item person">
-					<figure class="person__figure">
-						<img src="assets/img/avatar.png" height="120" width="120" alt="">
-					</figure>
-					<h2 class="person__name">Lorem</h2>
-					<p class="person__say">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, rerum!</p>
-				</li>
-			</ul>
-		</div>
-	</section>
-
+			<div>
+				<label class="contact-form__label" for="email-address">E-mail</label>
+				<input class="contact-form__field" type="email" id="email-address" placeholder="e.g. john@gmail.com">
+			</div>
+			<div>
+				<label class="contact-form__label" for="message">Message</label>
+				<textarea class="contact-form__field" id="message" rows="15"></textarea>
+			</div>
+			<div>
+				<button class="contact-form__button">Send</button>
+			</div>
+		</form>
+	</div>
+</section>
 		</div>
 		<div class="subscribe">
 	<div class="container">
