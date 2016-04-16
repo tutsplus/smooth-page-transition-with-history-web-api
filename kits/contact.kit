@@ -1,31 +1,30 @@
-<!-- @include head -->	
-<section class="section contact">
-
-	<header class="section__header">
-		<div class="container">
-			<h1 class="section__heading">Contact Us</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, asperiores nisi.</p>
+<!-- $title: Contact &mdash; Acme -->
+<!-- @include header -->
+	<section class="section contact">
+		<header class="section__header animated fadeIn">
+			<div class="container">
+				<h1 class="section__heading">Contact Us</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, asperiores nisi.</p>
+			</div>
+		</header>
+		<div class="container section__col animated fadeIn">
+			<form class="contact__form" action="" method="post">
+				<div>
+					<label class="contact__form-label" for="full-name">Name</label>
+					<input class="contact__form-field" type="text" id="full-name" placeholder="e.g. John Doe">
+				</div>
+				<div>
+					<label class="contact__form-label" for="email-address">E-mail</label>
+					<input class="contact__form-field" type="email" id="email-address" placeholder="e.g. john@gmail.com">
+				</div>
+				<div>
+					<label class="contact__form-label" for="message">Message</label>
+					<textarea class="contact__form-field" id="message" rows="15"></textarea>
+				</div>
+				<div>
+					<button class="btn">Send</button>
+				</div>
+			</form>
 		</div>
-	</header>
-
-	<div class="container section__col">
-		<form class="contact-form" action="" method="post">
-			<div>
-				<label class="contact-form__label" for="full-name">Name</label>
-				<input class="contact-form__field" type="text" id="full-name" placeholder="e.g. John Doe">
-			</div>
-			<div>
-				<label class="contact-form__label" for="email-address">E-mail</label>
-				<input class="contact-form__field" type="email" id="email-address" placeholder="e.g. john@gmail.com">
-			</div>
-			<div>
-				<label class="contact-form__label" for="message">Message</label>
-				<textarea class="contact-form__field" id="message" rows="15"></textarea>
-			</div>
-			<div>
-				<button class="contact-form__button">Send</button>
-			</div>
-		</form>
-	</div>
-</section>
-<!-- @include foot -->
+	</section>
+<!-- @include footer -->
