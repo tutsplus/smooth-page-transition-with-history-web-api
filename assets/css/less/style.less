@@ -1,5 +1,4 @@
 @import (less) '../../bower/normalize-css/normalize.css';
-@import (less) '../../bower/animate.css/animate.css';
 
 @brand: #d54e21;
 @primary: #4ab866;
@@ -102,7 +101,14 @@ a {
 		color: darken( @link, 10% );
 	}
 }
-
+body {
+	opacity: 0;
+	transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+	.wf-active &,
+	.wf-inactive &, {
+		opacity: 1;
+	}
+}
 .clearfix:before,
 .clearfix:after {
 	display:table;
