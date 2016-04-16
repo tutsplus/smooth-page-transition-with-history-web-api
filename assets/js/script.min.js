@@ -14,10 +14,10 @@
 			return;
 		}
 
-		var pageTitle = ( this.getAttribute( "rel" ) !== "home" ) ? this.textContent + " — Acme" : this.textContent;
-		var pageURL = this.href;
+		var pageTitle = ( this.title ) ? this.title : this.textContent;
+			pageTitle = ( this.getAttribute( "rel" ) === "home" ) ? pageTitle : pageTitle + " — Acme";
 
-		History.pushState( null, pageTitle, pageURL );
+		History.pushState( null, pageTitle, this.href );
 	} );
 
 	History.Adapter.bind( window, "statechange", function( event ) { // Note: We are using statechange instead of popstate
@@ -33,8 +33,8 @@
 				if ( "wrap" !== elem.id ) {
 					return;
 				}
-				$wrap.html( $( elem ).html() );			
-			});
+				$wrap.html( $( elem ).html() );
+			} );
 		} );
 	} );
 
