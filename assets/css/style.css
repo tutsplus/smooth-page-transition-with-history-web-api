@@ -448,6 +448,9 @@ a {
 a:hover {
   color: #0083a9;
 }
+img {
+  max-width: 100%;
+}
 body {
   opacity: 0;
   -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
