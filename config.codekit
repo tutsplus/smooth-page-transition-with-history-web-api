@@ -114,24 +114,13 @@
 		},
 	"\/assets\/js\/script.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/assets\/js\/script.js",
 		"outputAbbreviatedPath": "\/assets\/js\/script.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/script.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/script.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/script.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/contact.html": {

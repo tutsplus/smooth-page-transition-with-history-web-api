@@ -1,4 +1,4 @@
-( function( $, History ) {
+( function( $, History, undefined ) {
 
 	if ( !History.enabled ) {
 		return false;
