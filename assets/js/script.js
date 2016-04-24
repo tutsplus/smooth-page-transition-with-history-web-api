@@ -37,8 +37,11 @@
 					.promise()
 						.done( function( res ) {
 
-							if ( res.length !== 0 ) {
-								ga('set', { page: window.location.pathname, title: state.title });
+							if ( typeof ga === "function" && res.length !== 0 ) { // Make sure the new content is added, and the 'ga()' method is available.
+								ga('set', { 
+									page: window.location.pathname,
+									title: state.title
+								});
 								ga('send', 'pageview');
 							}
 						});
