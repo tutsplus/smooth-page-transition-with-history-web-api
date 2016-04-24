@@ -38,15 +38,10 @@
 					.html( $( elem ).html() )
 					.promise()
 						.done( function( res ) {
-							
-							console.log( res.length );
 
 							if ( res.length !== 0 ) {
-								ga('send', {
-									hitType: 'pageview',
-									page: url,
-									title: title
-								}); 
+								ga('set', { page: url, title: title });
+								ga('send', 'pageview');
 							}
 						});
 			} );
