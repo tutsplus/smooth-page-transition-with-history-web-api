@@ -24,8 +24,6 @@
 	History.Adapter.bind( window, "statechange", function() {
 
 		var state = History.getState();
-		var url = state.url;
-		var title = state.title;
 
 		$.get( state.url, function( res ) {
 			$.each( $( res ), function( index, elem ) {
@@ -40,7 +38,7 @@
 						.done( function( res ) {
 
 							if ( res.length !== 0 ) {
-								ga('set', { page: url, title: title });
+								ga('set', { page: window.location.pathname, title: state.title });
 								ga('send', 'pageview');
 							}
 						});
