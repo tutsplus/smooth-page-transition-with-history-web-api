@@ -58,7 +58,8 @@
 	url('fonts/redacted-script-regular.ttf') format('truetype'),
 	url('fonts/redacted-script-regular.svg#redacted_scriptregular') format('svg');
 }
-@keyframes slideInDown {
+
+@keyframes slideInUp {
 	from {
 		transform: translate3d(0, 10px, 0);
 		opacity: 0;
@@ -227,9 +228,11 @@ body {
 	padding:60px 0 90px;
 }
 .section {
+	
 	animation-duration: .38s;
 	animation-fill-mode: both;
-	animation-name: slideInDown;
+	animation-name: slideInUp;
+
 	&__header {
 		padding-bottom:80px;
 

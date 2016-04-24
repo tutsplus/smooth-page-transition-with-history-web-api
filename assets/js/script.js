@@ -18,22 +18,37 @@
 			pageTitle = ( this.getAttribute( "rel" ) === "home" ) ? pageTitle : pageTitle + " — Acme";
 
 		History.pushState( null, pageTitle, this.href );
+
 	} );
 
-	History.Adapter.bind( window, "statechange", function( event ) { // Note: We are using statechange instead of popstate
+	History.Adapter.bind( window, "statechange", function() {
 
-		var regex = /.+?\:\/\/.+?(\/.+?)(?:#|\?|$)/;
 		var state = History.getState();
+		var url = state.url;
+		var title = state.title;
 
 		$.get( state.url, function( res ) {
-
-			var $res = $( res );
-
-			$.each( $res, function( index, elem ) {
-				if ( "wrap" !== elem.id ) {
+			$.each( $( res ), function( index, elem ) {
+				
+				if ( $wrap.selector !== "#" + elem.id ) {
 					return;
 				}
-				$wrap.html( $( elem ).html() );
+
+				$wrap
+					.html( $( elem ).html() )
+					.promise()
+						.done( function( res ) {
+							
+							console.log( res.length );
+
+							if ( res.length !== 0 ) {
+								ga('send', {
+									hitType: 'pageview',
+									page: url,
+									title: title
+								}); 
+							}
+						});
 			} );
 		} );
 	} );

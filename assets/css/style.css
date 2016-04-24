@@ -392,7 +392,7 @@ textarea {
   src: url('fonts/redacted-script-regular.eot');
   src: url('fonts/redacted-script-regular.eot?#iefix') format('embedded-opentype'), url('fonts/redacted-script-regular.woff2') format('woff2'), url('fonts/redacted-script-regular.woff') format('woff'), url('fonts/redacted-script-regular.ttf') format('truetype'), url('fonts/redacted-script-regular.svg#redacted_scriptregular') format('svg');
 }
-@-webkit-keyframes slideInDown {
+@-webkit-keyframes slideInUp {
   from {
     -webkit-transform: translate3d(0, 10px, 0);
             transform: translate3d(0, 10px, 0);
@@ -404,7 +404,7 @@ textarea {
     opacity: 1;
   }
 }
-@keyframes slideInDown {
+@keyframes slideInUp {
   from {
     -webkit-transform: translate3d(0, 10px, 0);
             transform: translate3d(0, 10px, 0);
@@ -579,8 +579,8 @@ body {
           animation-duration: .38s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-name: slideInDown;
-          animation-name: slideInDown;
+  -webkit-animation-name: slideInUp;
+          animation-name: slideInUp;
 }
 .section__header {
   padding-bottom: 80px;
