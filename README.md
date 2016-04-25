@@ -5,4 +5,4 @@ In this tutorial we are going to build a static website with so called "History 
 
 **Available on Tuts+ April 2016**
 
-[View the demo](http://tutsplus.github.io/html5-history)
+[View the demo](http://tutsplus.github.io/smooth-page-transition-with-history-web-api)
